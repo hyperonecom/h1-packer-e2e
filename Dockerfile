@@ -20,9 +20,7 @@ RUN make dev
 ENV PATH=/go/packer/bin/:$PATH
 
 # Hot-patch (serie 2)
-RUN sed -i 's/5c3fef425ceadc3d412beee5/ubuntu/g' test/fixtures/builder-hyperone/minimal.json builder/hyperone/builder_acc_test.go
 RUN sed -i "s#\"packerbats-minimal\"#'packerbats-minimal'#" test/builder_hyperone.bats
-RUN echo '' > /bin/aws; chmod +x /bin/aws;
 
 # Build
 CMD ["packer"]
