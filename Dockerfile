@@ -12,9 +12,6 @@ RUN curl -s -L https://github.com/hyperonecom/h1-cli/releases/download/v1.4.0/h1
 RUN git clone https://github.com/hyperonecom/packer.git -b "${PACKER_BRANCH}" --single-branch --depth 1
 WORKDIR /go/packer
 
-# Hot-patch (serie 1)
-RUN rm go.sum
-
 # Build
 RUN make dev
 ENV PATH=/go/packer/bin/:$PATH
