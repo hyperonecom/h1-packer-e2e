@@ -19,8 +19,5 @@ RUN rm go.sum
 RUN make dev
 ENV PATH=/go/packer/bin/:$PATH
 
-# Hot-patch (serie 2)
-RUN sed -i "s#\"packerbats-minimal\"#'packerbats-minimal'#" test/builder_hyperone.bats
-
 # Build
 CMD ["packer"]
