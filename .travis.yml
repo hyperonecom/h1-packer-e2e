@@ -5,5 +5,5 @@ services:
 
 script:
 - docker build . -t packer-e2e
-- docker run -e HYPERONE_PROJECT="any" -e HYPERONE_TOKEN="$H1_TOKEN" -e H1_TOKEN="$H1_TOKEN" packer-e2e bats test/builder_hyperone.bats
+- travis_retry docker run -e HYPERONE_PROJECT="any" -e HYPERONE_TOKEN="$H1_TOKEN" -e H1_TOKEN="$H1_TOKEN" packer-e2e bats test/builder_hyperone.bats
 
