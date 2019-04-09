@@ -1,4 +1,4 @@
-FROM golang:alpine
+FROM golang:1.12-alpine
 ENV H1_CLI_VERSION="v1.4.0"
 ENV PACKER_REPO_URL="https://github.com/hashicorp/packer.git"
 ENV PACKER_BRANCH="master"
