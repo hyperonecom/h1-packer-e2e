@@ -1,5 +1,4 @@
 FROM golang:1.12-alpine
-ENV H1_CLI_VERSION="v1.4.0"
 ENV PACKER_REPO="github.com/hashicorp/packer"
 ENV PACKER_BRANCH="master"
 ENV PATH=/go/packer/bin/:$PATH
