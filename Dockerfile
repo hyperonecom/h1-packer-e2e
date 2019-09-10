@@ -8,8 +8,8 @@ RUN npx pkg -c package.json -t "node12-alpine" -o "./dist/h1" "./bin/h1"
 
 FROM golang:1.12-alpine
 COPY --from=cli_builder /h1-cli-develop/dist/h1 /bin/h1
-ENV PACKER_REPO="github.com/hashicorp/packer"
-ENV PACKER_BRANCH="master"
+ENV PACKER_REPO="github.com/ad-m/packer"
+ENV PACKER_BRANCH="ad-m-patch-1"
 ENV PATH=/go/packer/bin/:$PATH
 
 # Setup
