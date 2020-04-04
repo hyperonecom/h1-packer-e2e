@@ -1,4 +1,4 @@
-FROM golang:1.12-alpine
+FROM golang:1.13-alpine
 RUN apk add --repository "http://dl-cdn.alpinelinux.org/alpine/edge/testing" h1-cli
 ENV PACKER_REPO="github.com/hashicorp/packer"
 ENV PACKER_BRANCH="master"
